@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function student(firstname,lastname,id,english,maths,science){
+          //object inside function
+          this.fName = firstname;
+          this.lName = lastname;
+          this.id = id;
+          this.eng = english;
+          this.math = maths;
+          this.scien = science;
+          this.calculateAverage = function(){
+return (this.math + this.eng + this.scien)/3;
+          }
+          
+          this.displayDetails = function(){
+          	 document.write("Student Id: " + this.id + "<br />");
+        document.write("Name: " + this.fName + " " + this.lName + "<br />");
+        var avg = this.calculateAverage();
+        document.write("Average Marks: " + avg);
+          }
+	}
+	var st1 = new student("Joseph","Bill",15,40,40,40);
+	st1.displayDetails();
+</script>
+</body>
+</html>
+
+
+
+

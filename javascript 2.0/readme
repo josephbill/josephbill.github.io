@@ -1,0 +1,50 @@
+//structure of a js object
+//access properties and methods inside objects
+
+var objName = new Object();
+//adding to above object
+objName.property1 = value1;
+objName.property2 = value2;
+
+objName.method1 = function(){
+	//lines of code
+}
+
+or
+
+var objName = {
+	  property1: value,
+	  property2: value2,
+	  method1: function(){
+	      ..lines of code
+	  }
+} 
+
+//access to object properties and methods
+
+objectname.propertyName;
+objectname.methodname();
+
+//loop through an object
+for (variablename in object){
+	//lines to be excuted
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>Objects!!!</title>
+
+</head>
+<body>
+	<!-- form inputs -->
+    <form id="formScores">
+    	  <div>
+    	  	<input type="number" name=""id="mathscore" placeholder="enter maths score">
+    	  	  </div>
+    	  	    <div>
+    	  	<input type="number" name=""id="engscore" placeholder="enter english score">
+    	  	  </div>
+    	  	      <div>
+    	  	<input type="number" name=""id="sciencescore" placeholder="enter science score">
+    	  	  </div>
+    	  	      <div>
+    	  	<input type="submit" name=""id="submit" value="print report">
+    	  	  </div>
+    </form>
+	<script type="text/javascript">
+		//capture values 
+	  document.getElementById("formScores").addEventListener('submit', function(){
+	  	    //values
+	  	    var englishScore = document.getElementById("engscore").value;
+	  	     var mathScore = document.getElementById("mathscore").value;
+	  	     var scienceScore = document.getElementById("sciencescore").value;
+      console.log(mathScore+englishScore+scienceScore);
+      //object     
+	  var student = new Object();
+      student.fName = "John";
+      student.lName = "Smith";
+      student.id = 5;
+      student.maths = parseInt(mathScore);
+      student.english = parseInt(englishScore);
+      student.science = parseInt(scienceScore);
+      student.calculateAverage = function()
+      {
+      	return (student.maths + student.english + student.science)/3;
+      };
+      student.displayDetails = function()
+      {
+        document.write("Student Id: " + student.id + "<br />");
+        document.write("Name: " + student.fName + " " + student.lName + "<br />");
+        var avg = student.calculateAverage();
+        document.write("Average Marks: " + avg);
+      };
+		student.displayDetails();
+	  	    	  });
+
+      
+	</script>
+</body>
+</html>
+
+
